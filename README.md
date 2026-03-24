@@ -7,7 +7,7 @@ API REST completa para gestión hospitalaria construida con Node.js, Express y S
 ## 🌐 URL en Producción
 
 ```
-https://sistema-hospitalario-api.onrender.com
+https://taller-final-node.onrender.com
 ```
 
 ## 🔐 Autenticación
