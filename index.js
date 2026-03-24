@@ -49,7 +49,6 @@ app.get("/health", (req, res) => {
 
 // ─── Rutas ─────────────────────────────────────────────────────────────────
 app.use("/api/especialidades",     require("./routes/especialidades"));
-app.use("/api/usuarios",           require("./routes/usuarios"));
 app.use("/api/medicos",            require("./routes/medicos"));
 app.use("/api/pacientes",          require("./routes/pacientes"));
 app.use("/api/citas",              require("./routes/citas"));

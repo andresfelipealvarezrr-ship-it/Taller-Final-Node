@@ -31,17 +31,17 @@ db.serialize(() => {
   // ─────────────────────────────────────────
   // TABLA 2: usuarios  (para JWT login)
   // ─────────────────────────────────────────
-  db.run(`
-    CREATE TABLE IF NOT EXISTS usuarios (
-      id         INTEGER PRIMARY KEY AUTOINCREMENT,
-      nombre     TEXT    NOT NULL,
-      email      TEXT    NOT NULL UNIQUE,
-      password   TEXT    NOT NULL,
-      rol        TEXT    NOT NULL DEFAULT 'medico' CHECK(rol IN ('admin', 'medico')),
-      activo     INTEGER NOT NULL DEFAULT 1 CHECK(activo IN (0, 1)),
-      created_at TEXT    NOT NULL DEFAULT (datetime('now'))
-    )
-  `);
+  //  db.run(`
+   //   CREATE TABLE IF NOT EXISTS usuarios (
+   //     id         INTEGER PRIMARY KEY AUTOINCREMENT,
+   //     nombre     TEXT    NOT NULL,
+  //      email      TEXT    NOT NULL UNIQUE,
+   //     password   TEXT    NOT NULL,
+   //     rol        TEXT    NOT NULL DEFAULT 'medico' CHECK(rol IN ('admin', 'medico')),
+   //     activo     INTEGER NOT NULL DEFAULT 1 CHECK(activo IN (0, 1)),
+   //     created_at TEXT    NOT NULL DEFAULT (datetime('now'))
+   //   )
+   // `);
 
   // ─────────────────────────────────────────
   // TABLA 3: medicos
@@ -147,7 +147,7 @@ db.serialize(() => {
     if (err) {
       console.error("❌ Error creando tablas:", err.message);
     } else {
-      console.log("✅ 8 tablas creadas correctamente");
+      console.log("✅ 7 tablas creadas correctamente");
     }
   });
 });

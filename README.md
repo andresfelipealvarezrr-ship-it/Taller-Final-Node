@@ -31,7 +31,6 @@ especialidades ←── medicos ←── citas ──→ pacientes
                                 │
                            medicamentos
 
-usuarios ──→ medicos
 ```
 
 ### Tablas y su función
