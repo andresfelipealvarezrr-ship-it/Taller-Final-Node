@@ -144,329 +144,6 @@
       ]
     },
     {
-      "name": "Usuarios",
-      "item": [
-        {
-          "name": "usuarios",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "bearer",
-              "bearer": [
-                {
-                  "key": "token",
-                  "value": "",
-                  "type": "string"
-                }
-              ]
-            },
-            "method": "GET",
-            "header": [
-              {
-                "key": "password",
-                "value": "TuPasswordSegura2026",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": {
-              "raw": "http://localhost:3000/api/usuarios",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "3000",
-              "path": [
-                "api",
-                "usuarios"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "usuarios ID",
-          "request": {
-            "method": "GET",
-            "header": []
-          },
-          "response": []
-        },
-        {
-          "name": "Agregar",
-          "request": {
-            "auth": {
-              "type": "bearer",
-              "bearer": [
-                {
-                  "key": "token",
-                  "value": "",
-                  "type": "string"
-                }
-              ]
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "password",
-                "value": "TuPasswordSegura2026",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{ \"nombre\": \"Dr. Carlos López\", \"email\": \"carlos.lopez@hospital.com\", \"password\": \"medico123\", \"rol\": \"medico\" }",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "http://localhost:3000/api/usuarios",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "3000",
-              "path": [
-                "api",
-                "usuarios"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "Actualizar",
-          "request": {
-            "method": "PUT",
-            "header": [
-              {
-                "key": "password",
-                "value": "TuPasswordSegura2026",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{ \"nombre\": \"Dr. Juan Pérez Actualizado\", \"telefono\": \"3001111111\" }",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "http://localhost:3000/api/usuarios/3",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "3000",
-              "path": [
-                "api",
-                "usuarios",
-                "3"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "Eliminar",
-          "request": {
-            "method": "DELETE",
-            "header": [
-              {
-                "key": "password",
-                "value": "TuPasswordSegura2026",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{ \"nombre\": \"Dr. Juan Pérez Actualizado\", \"telefono\": \"3001111111\" }"
-            },
-            "url": {
-              "raw": "http://localhost:3000/api/usuarios/1",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "3000",
-              "path": [
-                "api",
-                "usuarios",
-                "1"
-              ]
-            }
-          },
-          "response": []
-        }
-      ]
-    },
-    {
-      "name": "Medicos",
-      "item": [
-        {
-          "name": "Medicos",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "bearer",
-              "bearer": [
-                {
-                  "key": "token",
-                  "value": "",
-                  "type": "string"
-                }
-              ]
-            },
-            "method": "GET",
-            "header": [
-              {
-                "key": "password",
-                "value": "TuPasswordSegura2026",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{ \"nombre\": \"Dr. Carlos López\", \"email\": \"carlos.lopez@hospital.com\", \"password\": \"medico123\", \"rol\": \"medico\" }"
-            },
-            "url": {
-              "raw": "http://localhost:3000/api/medicos",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "3000",
-              "path": [
-                "api",
-                "medicos"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "Medicos ID",
-          "request": {
-            "method": "GET",
-            "header": []
-          },
-          "response": []
-        },
-        {
-          "name": "Agregar",
-          "request": {
-            "auth": {
-              "type": "bearer",
-              "bearer": [
-                {
-                  "key": "token",
-                  "value": "",
-                  "type": "string"
-                }
-              ]
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "password",
-                "value": "TuPasswordSegura2026",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{ \"usuario_id\": 2, \"especialidad_id\": 2, \"numero_licencia\": \"MED-001\", \"telefono\": \"3001234567\" }",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "http://localhost:3000/api/medicos",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "3000",
-              "path": [
-                "api",
-                "medicos"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "Actualizar",
-          "request": {
-            "auth": {
-              "type": "bearer",
-              "bearer": [
-                {
-                  "key": "token",
-                  "value": "",
-                  "type": "string"
-                }
-              ]
-            },
-            "method": "PUT",
-            "header": [
-              {
-                "key": "password",
-                "value": "TuPasswordSegura2026",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{ \"telefono\": \"3009999999\", \"numero_licencia\": \"MED-001-ACT\" }",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "http://localhost:3000/api/medicos/1",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "3000",
-              "path": [
-                "api",
-                "medicos",
-                "1"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "Eliminar",
-          "request": {
-            "method": "GET",
-            "header": []
-          },
-          "response": []
-        }
-      ]
-    },
-    {
       "name": "Pacientes",
       "item": [
         {
@@ -602,7 +279,7 @@
           "response": []
         },
         {
-          "name": "New Request",
+          "name": "Borrar",
           "request": {
             "method": "DELETE",
             "header": [
@@ -613,16 +290,17 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:3000/api/medicamentos/3",
-              "protocol": "http",
+              "raw": "https://taller-final-node.onrender.com/api/medicamentos/1",
+              "protocol": "https",
               "host": [
-                "localhost"
+                "taller-final-node",
+                "onrender",
+                "com"
               ],
-              "port": "3000",
               "path": [
                 "api",
                 "medicamentos",
-                "3"
+                "1"
               ]
             }
           },
@@ -1002,6 +680,194 @@
                 "api",
                 "historias-clinicas",
                 "2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Medicos",
+      "item": [
+        {
+          "name": "Medicos",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "password",
+                "value": "TuPasswordSegura2026",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \"nombre\": \"Dr. Carlos López\", \"email\": \"carlos.lopez@hospital.com\", \"password\": \"medico123\", \"rol\": \"medico\" }"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/medicos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "medicos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Medicos ID",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Agregar",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "password",
+                "value": "TuPasswordSegura2026",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \"usuario_id\": 2, \"especialidad_id\": 2, \"numero_licencia\": \"MED-001\", \"telefono\": \"3001234567\" }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/medicos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "medicos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "password",
+                "value": "TuPasswordSegura2026",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \"telefono\": \"3009999999\", \"numero_licencia\": \"MED-001-ACT\" }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/medicos/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "medicos",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "password",
+                "value": "TuPasswordSegura2026",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \"telefono\": \"3009999999\", \"numero_licencia\": \"MED-001-ACT\" }"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/medicos/3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "medicos",
+                "3"
               ]
             }
           },
