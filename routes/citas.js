@@ -22,7 +22,6 @@ router.get("/", (req, res) => {
        FROM citas c
        JOIN pacientes p ON c.paciente_id = p.id
        JOIN medicos m ON c.medico_id = m.id
-       JOIN usuarios u ON m.usuario_id = u.id
        ${whereClause} ORDER BY c.fecha DESC, c.hora ASC LIMIT ? OFFSET ?`,
       [...params, parseInt(limit), offset],
       (err, rows) => {
