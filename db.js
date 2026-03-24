@@ -29,39 +29,26 @@ db.serialize(() => {
   `);
 
   // ─────────────────────────────────────────
-  // TABLA 2: usuarios  (para JWT login)
-  // ─────────────────────────────────────────
-  //  db.run(`
-   //   CREATE TABLE IF NOT EXISTS usuarios (
-   //     id         INTEGER PRIMARY KEY AUTOINCREMENT,
-   //     nombre     TEXT    NOT NULL,
-  //      email      TEXT    NOT NULL UNIQUE,
-   //     password   TEXT    NOT NULL,
-   //     rol        TEXT    NOT NULL DEFAULT 'medico' CHECK(rol IN ('admin', 'medico')),
-   //     activo     INTEGER NOT NULL DEFAULT 1 CHECK(activo IN (0, 1)),
-   //     created_at TEXT    NOT NULL DEFAULT (datetime('now'))
-   //   )
-   // `);
-
-  // ─────────────────────────────────────────
-  // TABLA 3: medicos
+  // TABLA 2: medicos
+  // (usuario_id eliminado — tabla usuarios ya no existe)
   // ─────────────────────────────────────────
   db.run(`
     CREATE TABLE IF NOT EXISTS medicos (
       id               INTEGER PRIMARY KEY AUTOINCREMENT,
-      usuario_id       INTEGER NOT NULL UNIQUE,
+      nombre           TEXT    NOT NULL,
+      email            TEXT    NOT NULL UNIQUE,
+      password         TEXT    NOT NULL,
       especialidad_id  INTEGER NOT NULL,
       numero_licencia  TEXT    NOT NULL UNIQUE,
       telefono         TEXT    NOT NULL,
       activo           INTEGER NOT NULL DEFAULT 1 CHECK(activo IN (0, 1)),
       created_at       TEXT    NOT NULL DEFAULT (datetime('now')),
-      FOREIGN KEY (usuario_id)      REFERENCES usuarios(id)      ON DELETE CASCADE,
       FOREIGN KEY (especialidad_id) REFERENCES especialidades(id) ON DELETE RESTRICT
     )
   `);
 
   // ─────────────────────────────────────────
-  // TABLA 4: pacientes
+  // TABLA 3: pacientes
   // ─────────────────────────────────────────
   db.run(`
     CREATE TABLE IF NOT EXISTS pacientes (
@@ -79,7 +66,7 @@ db.serialize(() => {
   `);
 
   // ─────────────────────────────────────────
-  // TABLA 5: citas
+  // TABLA 4: citas
   // ─────────────────────────────────────────
   db.run(`
     CREATE TABLE IF NOT EXISTS citas (
@@ -97,7 +84,7 @@ db.serialize(() => {
   `);
 
   // ─────────────────────────────────────────
-  // TABLA 6: medicamentos
+  // TABLA 5: medicamentos
   // ─────────────────────────────────────────
   db.run(`
     CREATE TABLE IF NOT EXISTS medicamentos (
@@ -112,7 +99,7 @@ db.serialize(() => {
   `);
 
   // ─────────────────────────────────────────
-  // TABLA 7: diagnosticos
+  // TABLA 6: diagnosticos
   // ─────────────────────────────────────────
   db.run(`
     CREATE TABLE IF NOT EXISTS diagnosticos (
@@ -129,7 +116,7 @@ db.serialize(() => {
   `);
 
   // ─────────────────────────────────────────
-  // TABLA 8: historias_clinicas
+  // TABLA 7: historias_clinicas
   // ─────────────────────────────────────────
   db.run(`
     CREATE TABLE IF NOT EXISTS historias_clinicas (
