@@ -18,7 +18,7 @@ router.get("/", (req, res) => {
   db.get(`SELECT COUNT(*) as total FROM citas c ${whereClause}`, params, (err, count) => {
     if (err) return res.status(500).json({ success: false, message: err.message });
     db.all(
-      `SELECT c.*, p.nombre as paciente, u.nombre as medico
+      `SELECT c.*, p.nombre as paciente, m.nombre as medico
        FROM citas c
        JOIN pacientes p ON c.paciente_id = p.id
        JOIN medicos m ON c.medico_id = m.id
